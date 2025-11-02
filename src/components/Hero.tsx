@@ -13,42 +13,47 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[90vh] items-center justify-center overflow-hidden"
+      className="relative min-h-[90vh] overflow-hidden bg-background"
     >
-      {/* Background Image with Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
-      </div>
+      <div className="container px-4 py-20">
+        <div className="grid min-h-[80vh] items-center gap-12 lg:grid-cols-2">
+          {/* Left Side - Text Content */}
+          <div className="flex flex-col justify-center space-y-8">
+            <h1 className="text-5xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+              Forge Your <span className="text-primary">Discipline</span>.
+              <br />
+              Transform Your Life.
+            </h1>
+            <p className="text-xl text-muted-foreground sm:text-2xl">
+              Personal Training and Holistic Coaching that builds strength, mindset, and
+              sustainable routine.
+            </p>
+            <div>
+              <Button
+                onClick={() => scrollToSection("contact")}
+                variant="hero"
+                size="xl"
+                className="group"
+              >
+                Start Your Transformation
+                <ArrowRight className="transition-transform group-hover:translate-x-1" />
+              </Button>
+            </div>
+          </div>
 
-      {/* Content */}
-      <div className="container relative z-10 px-4 py-20">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
-            Forge Your <span className="text-primary">Discipline</span>.
-            <br />
-            Transform Your Life.
-          </h1>
-          <p className="mb-8 text-xl text-muted-foreground sm:text-2xl">
-            Personal Training and Holistic Coaching that builds strength, mindset, and
-            sustainable routine.
-          </p>
-          <Button
-            onClick={() => scrollToSection("contact")}
-            variant="hero"
-            size="xl"
-            className="group"
-          >
-            Start Your Transformation
-            <ArrowRight className="transition-transform group-hover:translate-x-1" />
-          </Button>
+          {/* Right Side - Image */}
+          <div className="relative flex items-center justify-center">
+            <div className="relative aspect-square w-full max-w-lg overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src={heroImage}
+                alt="Personal training and fitness coaching"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent" />
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Bottom Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };
