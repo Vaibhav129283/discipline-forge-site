@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -70,18 +71,18 @@ const Header = () => {
             )}
           </div>
 
-          <button
-            onClick={() => scrollToSection("testimonials")}
+          <Link
+            to="/testimonials"
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             Testimonials
-          </button>
-          <button
-            onClick={() => scrollToSection("blog")}
+          </Link>
+          <Link
+            to="/blog"
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             Blog
-          </button>
+          </Link>
           <button
             onClick={() => scrollToSection("contact")}
             className="text-sm font-medium transition-colors hover:text-primary"
@@ -127,18 +128,20 @@ const Header = () => {
             >
               Coaching
             </button>
-            <button
-              onClick={() => scrollToSection("testimonials")}
+            <Link
+              to="/testimonials"
               className="text-left text-sm font-medium transition-colors hover:text-primary"
+              onClick={() => setMobileMenuOpen(false)}
             >
               Testimonials
-            </button>
-            <button
-              onClick={() => scrollToSection("blog")}
+            </Link>
+            <Link
+              to="/blog"
               className="text-left text-sm font-medium transition-colors hover:text-primary"
+              onClick={() => setMobileMenuOpen(false)}
             >
               Blog
-            </button>
+            </Link>
             <button
               onClick={() => scrollToSection("contact")}
               className="text-left text-sm font-medium transition-colors hover:text-primary"
