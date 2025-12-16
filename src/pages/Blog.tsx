@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import BlogCard from "@/components/BlogCard";
 
 const featuredPost = {
+  slug: "complete-guide-sustainable-fitness-habits",
   image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
   title: "The Complete Guide to Building Sustainable Fitness Habits",
   excerpt: "Discover the science-backed strategies for creating lasting fitness routines. Learn how discipline, not motivation, becomes the foundation for transforming your body and mind. This comprehensive guide covers everything from goal setting to overcoming plateaus.",
@@ -14,6 +15,7 @@ const featuredPost = {
 
 const blogPosts = [
   {
+    slug: "5-morning-routines-change-life",
     image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80",
     title: "5 Morning Routines That Will Change Your Life",
     excerpt: "Start your day with intention and watch how it transforms your entire life.",
@@ -21,6 +23,7 @@ const blogPosts = [
     date: "Nov 28, 2024",
   },
   {
+    slug: "nutrition-myths-debunked",
     image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80",
     title: "Nutrition Myths Debunked: What Science Really Says",
     excerpt: "Separating fact from fiction in the world of fitness nutrition.",
@@ -28,6 +31,7 @@ const blogPosts = [
     date: "Nov 25, 2024",
   },
   {
+    slug: "power-of-mindset-physical-transformation",
     image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80",
     title: "The Power of Mindset in Physical Transformation",
     excerpt: "How your mental approach determines your physical results.",
@@ -35,6 +39,7 @@ const blogPosts = [
     date: "Nov 22, 2024",
   },
   {
+    slug: "progressive-overload-key-growth",
     image: "https://images.unsplash.com/photo-1581009146145-b5ef050c149a?w=600&q=80",
     title: "Progressive Overload: The Key to Continuous Growth",
     excerpt: "Understanding the fundamental principle behind muscle building.",
@@ -42,6 +47,7 @@ const blogPosts = [
     date: "Nov 18, 2024",
   },
   {
+    slug: "recovery-underrated-part-training",
     image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80",
     title: "Recovery: The Most Underrated Part of Training",
     excerpt: "Why rest days are just as important as training days.",
@@ -49,6 +55,7 @@ const blogPosts = [
     date: "Nov 15, 2024",
   },
   {
+    slug: "building-strength-any-age",
     image: "https://images.unsplash.com/photo-1598971457999-ca4ef48a9a71?w=600&q=80",
     title: "Building Strength at Any Age: It's Never Too Late",
     excerpt: "Age is just a number when it comes to getting stronger.",
