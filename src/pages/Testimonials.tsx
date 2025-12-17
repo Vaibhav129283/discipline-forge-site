@@ -2,6 +2,18 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import TestimonialCard from "@/components/TestimonialCard";
+import VideoTestimonialCard from "@/components/VideoTestimonialCard";
+
+const videoTestimonials = [
+  {
+    videoId: "TnmOgxPVkBM",
+    title: "Client Transformation Story",
+  },
+  {
+    videoId: "fgjDntbsG9Y",
+    title: "Fitness Journey Success",
+  },
+];
 
 const transformations = [
   {
@@ -90,9 +102,26 @@ const Testimonials = () => {
         </div>
       </section>
 
+      {/* Video Testimonials Section */}
+      <section className="pb-16">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-8 text-center text-3xl font-bold lg:text-4xl">
+            Watch Their <span className="text-primary">Stories</span>
+          </h2>
+          <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
+            {videoTestimonials.map((video, index) => (
+              <VideoTestimonialCard key={index} {...video} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Transformation Cards Grid */}
       <section className="pb-16">
         <div className="container mx-auto px-4">
+          <h2 className="mb-8 text-center text-3xl font-bold lg:text-4xl">
+            Before & <span className="text-primary">After</span>
+          </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {transformations.map((transformation, index) => (
               <TestimonialCard key={index} {...transformation} />
